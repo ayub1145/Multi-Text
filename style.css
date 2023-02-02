@@ -1,0 +1,54 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+body{
+  height: 100vh;
+  background: #121f21;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader {
+  position: relative;
+  font-size: 12vw;
+  font-family: sans-serif;
+  font-weight: 800;
+  color:transparent;
+  -webkit-text-stroke:0.1vw rgb(255,255,255,0.4);
+}
+.loader::before{
+  position: absolute;
+  content: attr(anim-text);
+  height: 100%;
+  width: 0%;
+  color:#fff;
+  border-right:2px solid #fff;
+  -webkit-text-stroke: 0.2vw #fff;
+  overflow: hidden;
+  animation: animate 7s linear infinite;
+
+}
+
+@keyframes animate {
+  50%{
+    width:100%;
+  }
+}
+
+/* multiText css */
+
+.wrapper h1{
+  position: absolute;
+  left:20%;
+  bottom:20%;
+  color: #fff;
+  font-family: sans-serif;
+  font-weight: 400;
+  overflow: hidden;
+}
+.multiText{
+  font-weight: 800;
+  color: #00a2ed;
+}
